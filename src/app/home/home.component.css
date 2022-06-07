@@ -1,0 +1,34 @@
+.main_box{
+  background-color: black;
+  height: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_box h1{
+  color: white;
+  font-size: 60px;
+}
+
+.nosotros{
+  background-color: aliceblue;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: center;
+}
+
+.nosotros h1{
+  margin: 30px;
+}
+
+.nosotros .parrafo{
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
