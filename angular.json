@@ -36,13 +36,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "6kb"
                 }
               ],
               "fileReplacements": [
@@ -105,5 +105,8 @@
       }
     }
   },
-  "defaultProject": "megadat-app"
+  "defaultProject": "megadat-app",
+  "cli": {
+    "analytics": "ef302aa5-eb41-482e-a172-9e24afdb873f"
+  }
 }
