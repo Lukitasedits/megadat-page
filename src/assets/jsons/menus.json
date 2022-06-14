@@ -1,0 +1,28 @@
+[{"imagenes": [
+  {
+  "formato": "jpg",
+  "nombre": "menu1",
+  "ruta": "/assets/imagenes/menus"
+},
+{
+  "formato": "jpg",
+  "nombre": "menu2",
+  "ruta": "/assets/imagenes/menus"
+},
+{
+  "formato": "jpg",
+  "nombre": "menu3",
+  "ruta": "/assets/imagenes/menus"
+}],
+  "titulo": "SISTEMA DE GESTIÓN",
+  "descripcion": "Nuestro sistema de gestión se divide en estos grandes módulos: Ventas, Compras, Productos, Caja, Usuarios Y Libros de IVA . Además se caracteriza por ser facil de usar e intuitivo para el usuario."
+},
+{"imagenes": [
+  {
+  "formato": "jpg",
+  "nombre": "menu4",
+  "ruta": "/assets/imagenes/menus"
+  }],
+  "titulo": "SISTEMA VISUAL ELECTRÓNICA",
+  "descripcion":"Nuestro sistema Visual Electrónica tiene como objetivo principal facturar electrónicamente de una manera cómoda y sencilla. Es un sistema mucho mas pequeño y económico que el de Gestión. Permite llevar el control de los productos, clientes, proveedores, ventas y compras. Además nos permite sacar el libro de IVA ventas e IVA compras."
+}]

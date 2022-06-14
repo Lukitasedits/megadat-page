@@ -1,0 +1,118 @@
+[{
+  "nombre": "Franca SRL",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"franca-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"franca-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Forniciniti",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"forciniti-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"forciniti-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Canes Shop",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"canes-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"canes-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "F.E.L.P",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"felp-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"felp-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Barlovento",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"barlovento-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"png",
+    "nombre":"barlovento-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Violini",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"violini-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"violini-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Arias",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"arias-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"arias-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "el Hornero",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"elhornero-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"elhornero-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+},
+{
+  "nombre": "Lactosur",
+  "fondo": {
+    "formato":"jpg",
+    "nombre":"lactosur-fondo",
+    "ruta":"/imagenes/empresas-fondos"
+  },
+  "logo":{
+    "formato":"jpg",
+    "nombre":"lactosur-logo",
+    "ruta":"/imagenes/empresas-logos"
+  }
+}
+]

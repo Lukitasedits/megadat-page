@@ -1,24 +1,62 @@
 <div class="main_box">
   <h1>MEGADAT</h1>
+  <video src="/assets/videos/publicidad-animada.mp4" loop autoplay [muted]="true"></video>
+  <div class="triangulo"></div>
 </div>
 
-<div class="nosotros">
-  <h1>NOSOTROS</h1>
-  <div class="parrafo">
-    <div #item1>
-      Somos una empresa informática, que se encarga de realizar sistemas y reparaciones con tres decadas de trayectoria.
+<div class="servicios-box">
+  <h1>SERVICIOS</h1>
+  <div class="servicios">
+    <div class="servicio" id="servicio1">
+      <div class="icono"></div>
+      <h2>Software</h2>
+      <p>Desarrollamos software a medida. Lo que significa que nuestro producto esta abierto a los cambios.</p>
     </div>
-    <div #item2>
-      Mail: Megadatcomputacion@gmail.com
+    <div class="servicio" id="servicio2">
+      <div class="icono"></div>
+      <h2>Reparación</h2>
+      <p>Reparacion de equipos tales como: Pc de escritorio, notebooks, netbooks, all-in-one, entre otros.</p>
     </div>
-    <div #item3>
-      Teléfono: (221) 3143794
+    <div class="servicio" id="servicio3">
+      <div class="icono"></div>
+      <h2>Venta de equipos</h2>
+      <p>Pc de escritorio, notebooks, netbooks, tablets entre otros accesorios.</p>
     </div>
-    <div #item4>
-      La Plata
-    </div>
-    <div #item5>
-      Instagram: Megadat Informatica
+    <div class="servicio" id="servicio4">
+      <div class="icono"></div>
+      <h2>Mantenimiento</h2>
+      <p>Si usted cree que su dispositivo tiene algun problema no dude en consultarnos.</p>
     </div>
   </div>
 </div>
+<div class="cabeza-empresas">◄    EMPRESAS QUE CONFIARON EN NOSOTROS    ►</div>
+<div class="empresas-box" >
+    <div class="empresa" (mouseover)="entradaLogo(empresa.nombre)" (mouseleave)="salidaLogo(empresa.nombre)"  *ngFor="let empresa of empresas;let  i = index"  [ngStyle]="{'width': (this.resto>0 && i>=empresas.length-this.resto)?'calc(100%/' + this.resto + ')':'calc( 100%/ ' + this.ePFila + ')'}">
+      <div class="fondo-empresa" [ngStyle]="{'background-image': 'url(/assets' + empresa.fondo.ruta + '/' + empresa.fondo.nombre + '.' + empresa.fondo.formato + ')'}">
+        <div class="pantalla-negra">
+          <h1>{{empresa.nombre.toUpperCase()}}</h1>
+          <div #logo class="logo" [ngStyle]="{'background-image': 'url(/assets' + empresa.logo.ruta + '/' + empresa.logo.nombre + '.' + empresa.logo.formato + ')'}"></div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="trabajos-box">
+  <b>TRABAJOS Y SISTEMAS</b>
+  <div class="subrayado"></div>
+  <h2>Contamos con varios sistemas en el mercado.</h2>
+  <div class="sistema-de-gestion">
+    <h1>SISTEMA DE GESTIÓN</h1>
+    <p>Nuestro sistema de gestión se divide en estos grandes módulos: Ventas, Compras, Productos, Caja, Usuarios Y Libros de IVA . Además se caracteriza por ser facil de usar e intuitivo para el usuario.</p>
+    <div class="galeria" #galeria>
+      <div class="galeria-frontal" #galeriaFrontal>
+        <div class="pantalla-negra">
+        </div>
+      </div>
+      <div class="galeria-trasera">
+        <div class="galeria-izquierda" #galeriaIzquierda (click)="girarDerecha()"></div>
+        <div class="galeria-derecha" #galeriaDerecha (click)="girarIzquierda()"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
