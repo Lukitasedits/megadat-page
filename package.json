@@ -2,8 +2,9 @@
   "name": "megadat-app",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild":"ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
@@ -20,11 +21,14 @@
     "@angular/router": "~13.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "@angular/cli": "^14.0.1",
+    "@angular/compiler-cli": "~13.0.0",
+    "typescript": "~4.4.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.4",
-    "@angular/cli": "~13.0.4",
+    "@angular/cli": "^14.0.1",
     "@angular/compiler-cli": "~13.0.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
@@ -36,5 +40,9 @@
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.4.3"
+  },
+  "engines": {
+    "node": "16.13.1",
+    "npm":"8.2.0"
   }
 }
