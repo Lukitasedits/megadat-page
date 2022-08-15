@@ -1,0 +1,194 @@
+.titulo{
+  width: 100%;
+  height: 400px;
+  color: snow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Raleway';
+  font-size: 60px;
+  padding-top: 50px;
+}
+
+.titulo b{
+  z-index: 1;
+  padding: 40px;
+  background-color: #1c1e25;
+  box-shadow: 0 0 10px #000;
+  text-shadow: 0 0 15px #000;
+  transition:  all 0.2s;
+}
+
+@media (max-width: 760px) {
+  .titulo b{
+    font-size: 40px;
+  }
+}
+
+.cuadrado{
+  left: 370px;
+  transform: rotateZ(45deg);
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: solid 7px rgb(131, 131, 131);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: animation-square;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.interno{
+  width: 100px;
+  height: 100px;
+  border: solid 7px rgb(131, 131, 131);
+  animation-name: animation-square;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes animation-square{
+  from{
+    transform: rotateZ(45deg);
+  }
+  to{
+    transform: rotateZ(405deg);
+  }
+
+}
+
+
+.fondo{
+  width: 100%;
+  height: auto;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(34,38,65,1) 100%);
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.modulo{
+  width: 70%;
+  height: auto;
+  background-color: rgb(22, 26, 25);
+  display: flex;
+  box-shadow: 0 0 10px #000;
+  flex-direction: column-reverse;
+  margin-top: 60px;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+
+.imagen-box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.imagen{
+  width: 90%;
+  height: 400px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center ;
+}
+
+#modulo1 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronica/modulo1.jpg');
+}
+
+#modulo2 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronica/modulo2.jpg');
+}
+
+#modulo3 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronica/modulo3.jpg');
+}
+
+#modulo4 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronica/modulo4.jpg');
+}
+
+#modulo5 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronica/modulo5.jpg');
+}
+
+#modulo6 .imagen{
+  background-image: url('/assets/imagenes/sistema-visual-electronican/modulo6.jpg');
+}
+
+#modulo7 .imagen{
+  background-image: url('/assets/imagenes/sistema-de-gestion/modulo6.jpg');
+}
+
+.texto{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.texto .titulo-modulo{
+  color: snow;
+  font-size: 50px;
+  font-family: 'Raleway';
+  text-align: center;
+}
+
+.texto .descripcion{
+  color: snow;
+  font-size: 20px;
+  font-family: 'Raleway';
+  text-align: justify;
+}
+
+
+@media (max-width: 700px){
+  .texto .titulo-descripcion{
+    font-size: 40px;
+  }
+}
+
+@media(max-width: 1050px){
+  .titulo b{
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.boton_descarga{
+  width: 300px;
+  height: 50px;
+  background: snow;
+  border-radius: 10px;
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: 'Raleway';
+  cursor: pointer;
+  box-shadow: 0 0 10px #000;
+  transition: all 0.3s ease;
+  color: #1c1e25;
+  text-decoration: none;
+}
+
+.boton_descarga:hover{
+  background-color: rgb(245, 250, 255);
+  width: 310px;
+  height: 60px;
+}
+

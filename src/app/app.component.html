@@ -1,1 +1,7 @@
-<app-home></app-home>
+<app-header class="header"></app-header>
+<div class="circuito">
+  <app-circuito-scroll color="negro" [alturaExacta]="alturaActualScroll" [scrollY]="100-porcentajeScroll"></app-circuito-scroll>
+  <app-circuito-scroll class="encendido" color="celeste" [scrollY]="100-porcentajeScroll"></app-circuito-scroll>
+</div>
+<router-outlet> </router-outlet>
+<app-footer></app-footer>

@@ -1,0 +1,12 @@
+
+<div class="circuito" [ngStyle]="{'clip-path': (color=='celeste')?'inset(0 0 ' + scrollY + '% 0)':'', 'height': (scrollY<=1)?'75vh':'80vh' }">
+  <div class="container" >
+    <div class="circulo" id="circulo1" [ngStyle]="{'background' : (color=='negro')?'black':'linear-gradient(90deg, rgba(134,250,255,1) 0%, rgba(153,252,255,1) 100%)'}">
+      <div class="circulo-interno"></div>
+    </div>
+    <div class="cable"  [ngStyle]="{'background' : (color=='negro')?'black':'linear-gradient(90deg, rgba(134,250,255,1) 0%, rgba(153,252,255,1) 100%)'}"></div>
+    <div class="circulo" id="circulo2"  [ngStyle]="{'background' : (color=='negro')?'black':'linear-gradient(90deg, rgba(134,250,255,1) 0%, rgba(153,252,255,1) 100%)'}">
+      <div class="circulo-interno"></div>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,19 @@
-import { Imagen } from './../models/imagen';
-import { MenuService } from './../services/menu.service';
-import { EmpresasService } from './../services/empresas-service';
-import { Component, OnInit, HostListener, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
+import { AnchorScrollService } from '../services/anchor-scroll.service';
+import { Imagen } from '../models/imagen';
+import { MenuService } from '../services/menu.service';
+import { EmpresasService } from '../services/empresas-service';
+import { Component, OnInit, HostListener, ViewChild, ElementRef, ViewChildren, QueryList, AfterViewInit, Inject, ChangeDetectionStrategy } from '@angular/core';
 import { Empresa } from '../models/empresa';
 import { Renderer2 } from '@angular/core';
 import { ConstantPool } from '@angular/compiler';
 import { Menu } from '../models/menu';
+import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChildren('logo') logos: QueryList<ElementRef>;
@@ -17,6 +21,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   @ViewChild('galeriaFrontal') galeriaFrontal: ElementRef;
   @ViewChild('galeriaIzquierda') galeriaIzquierda: ElementRef;
   @ViewChild('galeriaDerecha') galeriaDerecha: ElementRef;
+  @ViewChild('formContacto') formContacto: ElementRef;
   menus: Menu[];
   empresas: Empresa[] = [];
   tamPantalla:Number = document.documentElement.clientWidth;
@@ -26,34 +31,58 @@ export class HomeComponent implements OnInit, AfterViewInit {
   tituloTrabajo: string;
   descripcionTrabajo: string;
   trabajoActual: number = 0;
+  numberPhone: string = '777';
 
-  constructor(private empresasService : EmpresasService, private menusService: MenuService, private renderer: Renderer2) {
+  constructor(
+    private empresasService : EmpresasService, private anchorScrollService: AnchorScrollService , private menusService: MenuService, private renderer: Renderer2, public router: Router) {
    }
   ngAfterViewInit(): void {
     setTimeout(() => {
     this.inicialGaleria();
     this.reSizeWindow();
+    this.initAnchorScrolls();
     });
   }
 
   ngOnInit(): void {
     this.empresas = this.empresasService.getEmpresas();
     this.menus = this.menusService.getMenus();
-    console.log(this.menus)
   }
-
 
   @HostListener('window:resize', ['$event'])
   reSizeWindow(){
     this.tamPantalla = document.documentElement.clientWidth;
     this.ePFila= Number.parseInt(((this.tamPantalla.valueOf()-300)/300).toPrecision(1));
     this.resto = this.empresas.length%this.ePFila;
-    console.log(this.tamPantalla);
 
     const galeriaGeneral = this.galeria.nativeElement;
     let altoGaleria = this.tamPantalla.valueOf()*0.428;
-    console.log(altoGaleria);
     this.renderer.setStyle(galeriaGeneral, 'height', `${altoGaleria}px`);
+  }
+
+
+  initAnchorScrolls(){
+    this.anchorScrollService.resetElementScrolls();
+
+    let serviciosElement = document.getElementById('servicios');
+    if(serviciosElement){
+      this.anchorScrollService.addElementScroll(serviciosElement);
+    }
+
+    let empresasElement = document.getElementById('empresas');
+    if(empresasElement){
+      this.anchorScrollService.addElementScroll(empresasElement);
+    }
+
+    let sistemasElement = document.getElementById('sist');
+    if(sistemasElement){
+      this.anchorScrollService.addElementScroll(sistemasElement);
+    }
+
+    let contactoElement = document.getElementById('contacto');
+    if(contactoElement){
+      this.anchorScrollService.addElementScroll(contactoElement);
+    }
   }
 
   inicialGaleria(){
@@ -108,10 +137,8 @@ export class HomeComponent implements OnInit, AfterViewInit {
         const logaso = logosArray[i].nativeElement;
         this.renderer.setStyle(logaso, 'width', '200px');
         this.renderer.setStyle(logaso, 'height', '200px');
-        this.renderer.setStyle(logaso, 'transform', 'translatey(10px)');
       }
     }
-    console.log("hola");
   }
 
   salidaLogo(nombre:string){
@@ -123,7 +150,15 @@ export class HomeComponent implements OnInit, AfterViewInit {
         this.renderer.setStyle(logaso, 'height', '0px');
       }
     }
-    console.log("chau");
   }
 
+  goToSistemaDeGestion(){
+    this.router.navigate(['sistema-de-gestion']);
+    document.documentElement.scrollTop = 0;
+  }
+
+  goToSistemaVisualElectronica(){
+    this.router.navigate(['sistema-visual-electronica']);
+    document.documentElement.scrollTop = 0;
+  }
 }

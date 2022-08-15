@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=League+Spartan:wght@300&family=Mukta&family=Mulish&family=Raleway:wght@200;400&display=swap');
+
+
 .main_box{
   background-color: black;
   height: 140vh;
@@ -136,7 +138,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
   font-family: 'Raleway', sans-serif;
   border-bottom: 5px snow solid;
   width: 100%;
@@ -165,10 +166,6 @@
   transition: all 0.1s ease;
 }
 
-.empresa:hover{
-
-}
-
 
 .fondo-empresa{
   background-position: center center;
@@ -180,7 +177,6 @@
 
 
 .pantalla-negra{
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -191,8 +187,43 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
+.img-sis-vi-el .pantalla-negra{
+  transition: all 0.3s ease;
+  background-color: rgba(26, 26, 26, 0);
+  opacity: 0;
+  overflow-y: scroll;
+}
+
 .pantalla-negra:hover{
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-sis-vi-el .pantalla-negra:hover{
+  background-color: rgba(0, 0, 0, 0.674);
+  opacity: 100%;
+}
+
+.img-sis-vi-el span{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  color: snow;
+
+}
+
+.pantalla-negra span b{
+  font-size: 20px;
+  margin: 30px;
+}
+
+.pantalla-negra span ol li{
+  margin: 10px;
+  font-size: 14px;
+}
+
+.pantalla-negra span ol li a{
+  color: darkturquoise;
 }
 
 .empresa h1{
@@ -206,11 +237,11 @@
 .empresa .logo{
   background-size: cover;
   border-radius: 200px;
-  width: 200px;
-  height: 200px;
+  width: 0;
+  height: 0;
   position: absolute;
-  transition: all 0.5s ease;
-  transform: translateY(-300px);
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #000;
 }
 
 .trabajos-box{
@@ -295,9 +326,20 @@
   }
 }
 
+.sistema{
+  width: 96%;
+  height: auto;
+  background-color: rgba(53, 53, 53, 0.938);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
 .galeria{
-  padding-left: 50px;
-  padding-right: 50px;
   width: 100%;
   height: 650px;
   position: relative;
@@ -307,17 +349,11 @@
   transition: all 0.2s ease;
 }
 
-.sistema-de-gestion{
-  background-color: rgba(53, 53, 53, 0.938);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 20px;
-}
-
 .trabajos-box .galeria-frontal{
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center center;
   position: absolute;
-  margin: 50px;
   width: 65%;
   height: 75%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -362,23 +398,150 @@
   transform: translatex(-20px);
 }
 
-.galeria-frontal .pantalla-negra{
+.img-sis-vi-el{
+  height: 422.5px;
+  width: 750px;
+  background-size: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  transition: all 0.2s ease;
+  margin: 30px;
+  margin-top: 60px;
+}
+
+@media (max-width:950px) {
+  .img-sis-vi-el{
+    height: 337.5px;
+    width: 600px;
+  }
+}
+
+@media (max-width:650px) {
+  .img-sis-vi-el{
+    height: 253.125px;
+    width: 450px;
+  }
+}
+
+.auxiliar{
+  height: 1px;
+}
+
+.contacto-main-box{
+  width: 100%;
+  height: 800px;
+  background-color: #191820;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contacto-card{
+  background-color: #171a29;
+  height: auto;
+  width: 850px;
+  box-shadow: 0 0 10px #000;
+  z-index: 1;
   display: flex;
   flex-direction: column;
-  background-color:rgba(0, 0, 0, 0);
-  padding: 50px;
+  align-items: center;
+  border-radius: 5px;
 }
 
-.galeria-frontal .pantalla-negra:hover{
-  background-color:rgba(0, 0, 0, 0.8);
-}
-
-.galeria-frontal .pantalla-negra h1{
+.contacto-card h2{
+  font-size: 15px;
   margin: 30px;
-  color: snow;
-}
-
-.galeria-frontal .pantalla-negra p{
-  color: snow;
   text-align: center;
 }
+
+.contacto-card form{
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.contacto-card form .linea{
+  display: flex;
+  width: 80%;
+  height: 40px;
+}
+
+.contacto-card form #mensaje{
+  height: 200px;
+}
+
+.corte{
+  position: absolute;
+  top: 0px;
+  border-left: 50vw solid transparent;
+  border-top: 200px solid transparent;
+  border-right: 50vw solid #222641;
+  border-bottom: 200px solid #222641;
+  height: 0;
+  width: 0;
+  z-index: 0;
+}
+
+
+
+.linea .input{
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+  color: snow;
+
+  background-color: #171a29;
+  border: solid snow;
+  border-width: 0px 0px 2px 0;
+  resize: none;
+}
+
+.linea .mensaje{
+  border-width: 2px 2px 2px 2px;
+  border-radius: 7px;
+}
+
+.linea .mensaje::placeholder {
+  padding: 3px;
+  color:snow;
+}
+
+.linea .input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: snow;
+  opacity: 1; /* Firefox */
+  font-family: 'Raleway';
+}
+
+.linea .input:focus{
+  border: 2px;
+  transition: all 0.5s;
+}
+
+.boton-form{
+  cursor: pointer;
+  display: flex;
+  font-family: 'Raleway';
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  background-color: snow;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #000;
+  transition: all 0.2s;
+  bottom: 0px;
+  color: #000;
+  position: relative;
+
+}
+
+.boton-form:hover{
+  box-shadow: 0 5px 10px #000;
+  bottom: 2px;
+  border: 2px;
+}
+

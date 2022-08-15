@@ -1,10 +1,12 @@
+
+
 <div class="main_box">
   <h1>MEGADAT</h1>
   <video src="/assets/videos/publicidad-animada.mp4" loop autoplay [muted]="true"></video>
   <div class="triangulo"></div>
 </div>
 
-<div class="servicios-box">
+<div class="servicios-box"  id="servicios" #serviciosRef>
   <h1>SERVICIOS</h1>
   <div class="servicios">
     <div class="servicio" id="servicio1">
@@ -29,7 +31,7 @@
     </div>
   </div>
 </div>
-<div class="cabeza-empresas">◄    EMPRESAS QUE CONFIARON EN NOSOTROS    ►</div>
+<div class="cabeza-empresas" [ngStyle]="{'font-size': 'calc((30/840) *'+ tamPantalla +'px)'}" id="empresas" #empresasRef>◄    EMPRESAS QUE CONFIARON EN NOSOTROS    ►</div>
 <div class="empresas-box" >
     <div class="empresa" (mouseover)="entradaLogo(empresa.nombre)" (mouseleave)="salidaLogo(empresa.nombre)"  *ngFor="let empresa of empresas;let  i = index"  [ngStyle]="{'width': (this.resto>0 && i>=empresas.length-this.resto)?'calc(100%/' + this.resto + ')':'calc( 100%/ ' + this.ePFila + ')'}">
       <div class="fondo-empresa" [ngStyle]="{'background-image': 'url(/assets' + empresa.fondo.ruta + '/' + empresa.fondo.nombre + '.' + empresa.fondo.formato + ')'}">
@@ -40,23 +42,64 @@
       </div>
   </div>
 </div>
-<div class="trabajos-box">
+
+<div class="trabajos-box" id="sist" #sistemasRef>
   <b>TRABAJOS Y SISTEMAS</b>
   <div class="subrayado"></div>
   <h2>Contamos con varios sistemas en el mercado.</h2>
-  <div class="sistema-de-gestion">
+  <div class="sistema" >
     <h1>SISTEMA DE GESTIÓN</h1>
     <p>Nuestro sistema de gestión se divide en estos grandes módulos: Ventas, Compras, Productos, Caja, Usuarios Y Libros de IVA . Además se caracteriza por ser facil de usar e intuitivo para el usuario.</p>
     <div class="galeria" #galeria>
       <div class="galeria-frontal" #galeriaFrontal>
-        <div class="pantalla-negra">
-        </div>
       </div>
       <div class="galeria-trasera">
         <div class="galeria-izquierda" #galeriaIzquierda (click)="girarDerecha()"></div>
         <div class="galeria-derecha" #galeriaDerecha (click)="girarIzquierda()"></div>
       </div>
     </div>
+    <app-boton-pro (click)="goToSistemaDeGestion()"></app-boton-pro>
   </div>
+
+  <div class="sistema" id="sis-vi-el">
+    <h1>SISTEMA VISUAL ELECTRÓNICA</h1>
+    <p>Nuestro sistema Visual Electrónica tiene como objetivo principal facturar electrónicamente de una manera cómoda y sencilla. Es un sistema mucho mas pequeño y económico que el de Gestión. Permite llevar el control de los productos, clientes,proveedores,ventas y compras. Además nos permite sacar el libro de IVA ventas e IVA compras.</p>
+      <div class="img-sis-vi-el" style="background-image: url(assets/imagenes/menus/menu4.jpg)">
+        <div class="pantalla-negra">
+          <span>
+              <b>
+              Un sistema pequeño y eficaz, totalmente intuitivo que permite:
+              </b>
+            <ol>
+              <li>Autorizar tus facturas de forma rápida y sencilla, retornando un numero de CAE y fecha de vencimiento emitidos por la AFIP.</li>
+              <li>Exportar tus facturas en formato PDF para guardalas en el equipo, enviarlas por mail o imprimirlas.</li>
+              <li>Interactuar con tu contador para enviarle los archivos necesarios y facilitar el trabajo de ambas partes.</li>
+              <li>Para mas información descargue el PDF con todas las especificaciones de nuestro sistema en el siguiente link: <a target="_blank" href="http://www.megadat.com.ar/VisualPDF/Visual%20Electronica.pdf">Visual electrónica.pdf</a></li>
+              <li>Descargá el sistema completo (Con rutina de AFIP para facturar de forma electrónica): <a target="_blank" href="http://www.megadat.com.ar/Apps/VisualElectronica/VisualElectronicaFull.exe">Descargar sistema</a></li>
+            </ol>
+          </span>
+        </div>
+      </div>
+  <app-boton-pro (click)="goToSistemaVisualElectronica()"></app-boton-pro>
 </div>
+
+<section class="contacto-main-box" id="contacto" #contactoRef>
+  <div class="contacto-card">
+    <h1 class="titulo" >CONTÁCTANOS</h1>
+    <h2>Para recibir más información o realizar una consulta, por favor complete el siguiente formulario:</h2>
+    <form action="https://formspree.io/f/mnqrqpad" method="POST">
+      <div class="linea">
+        <input type="text" placeholder="Nombre y Apellido" class="input"  name="nombre" required appTitlecase>
+        <input type="email" placeholder="E-mail" id="" class="input" name="email" required>
+      </div>
+      <div class="linea">
+        <input type="text" placeholder="Teléfono" class="input" name="teléfono" numberFormat>
+      </div>
+      <div class="linea" id="mensaje">
+        <textarea placeholder="Mensaje..." class="input mensaje" name="message"></textarea>
+      </div>
+      <input type="submit" class="boton-form">
+      </form>
+  </div>
+</section>
 

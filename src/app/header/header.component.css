@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=League+Spartan:wght@300&family=Mukta&family=Mulish&family=Raleway:wght@200;400&display=swap');
+
+
+.cover{
+  position: fixed;
+  top: 0;
+  transition: all 0.2s ease;
+  height: auto;
+  width: 100%;
+  z-index: 5;
+}
+
+.main-box{
+  width: 100%;
+  height: 70px;
+  background-color: #222222;
+  box-shadow: 0 0 10px #000;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+
+.logo{
+  background-image: url('/assets/imagenes/megadat/logo-sin-fondo.png');
+  width: 45px;
+  height: 45px;
+  margin: 24px;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.lista{
+  color: snow;
+  display: flex;
+  margin-right: 60px;
+  height: 100%;
+}
+
+.item{
+  font-family: 'Raleway';
+  cursor: pointer;
+  transition: 0.1s all;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item:hover{
+  background-color: #000;
+}
+
+#sistemas{
+  position: relative;
+  display: flex;
+}
+
+.panelSistemas{
+  color: snow;
+  transition: all 0.2s;
+  position: absolute ;
+  top: -110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #171616;
+  width: 210px;
+  height: 110px;
+  font-size: 15px;
+  z-index: 1;
+}
+
+.separador{
+  height: 1px;
+  width: 90%;
+  background-color: snow;
+}
+
+.item-sistema{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+}
+
+a{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  color: snow;
+  text-decoration: none;
+}
+
+.item-sistema:hover{
+  background-color: #222222;
+}
+
+.menu{
+  height: 50px;
+  width: 50px;
+  box-shadow: 0 0 10px #000;
+  border-radius: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+  display: none;
+  background-size:60%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 0.1s;
+  background-image: url('/assets/imagenes/iconos/menu.png');
+}
+
+.menu:hover{
+  box-shadow: 0 0 5px #000;
+}
+
+.lista-menu{
+  width: 100%;
+  height: auto;
+  display: none;
+  position: absolute;
+  top: -200px;
+  background-color: antiquewhite;
+  flex-direction: column;
+  z-index: 1;
+  box-shadow: 5px 0 10px #000;
+  transition: all 0.2s ease;
+}
+
+.item-menu{
+  width: 100vw;
+  height: 50px;
+  color: snow;
+  background-color: #171616;;
+  display: flex;
+  position: relative;
+  align-items: center;
+  /*border: 2px solid rgb(50, 50, 50);*/
+  font-family: 'Raleway';
+  padding: 10px;
+  cursor: pointer;
+  box-shadow: 0 0 3px #000;
+}
+
+.item-menu:hover{
+  background-color: #222;
+}
+
+.flechita{
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 40px;
+  background-image: url('/assets/imagenes/iconos/flecha-abajo.png');
+  background-size: cover;
+  -webkit-filter: drop-shadow(0 0 10px #000);
+}
+
+.sub-menu{
+  box-shadow: 5px 0 10px #000;
+  width: 100vw;
+  height: 100px;
+}
+
+.sub-item{
+  background-color: #1a1a1a;
+  padding-left: 40px;
+}

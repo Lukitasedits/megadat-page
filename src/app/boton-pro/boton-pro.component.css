@@ -1,0 +1,59 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Josefin+Sans:wght@700&family=League+Spartan:wght@300&family=Mingzat&family=Mukta&family=Mulish&family=Raleway:wght@200;400&display=swap');
+.contenedor{
+  cursor: pointer;
+  perspective: 100000px;
+}
+
+.cubo{
+  position: relative;
+  width: 120px;
+  height: 120px;
+  transition: all 0.5s ease-out;
+  transform-style: preserve-3d;
+}
+
+.cubo:hover{
+  transform: rotateY(-90deg);
+}
+
+.cara{
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.492);
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(at 20px  20px, rgb(81, 252, 255), rgba(255, 255, 255, 0));
+  position: absolute;
+}
+
+#frontal{
+  width: 200px;
+  transform: translatez(40px) translatex(-45px);
+}
+
+#derecha{
+  transform: rotateY(-90deg) translatez(-115px);
+}
+
+.texto{
+  width: 110px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Mingzat', sans-serif;
+  position: absolute;
+  font-size: 18px;
+  text-shadow: 0px 0px 5px #fff;
+
+}
+
+.logo{
+  width: 80px;
+  height: 80px;
+  background-image: url("/assets/imagenes/megadat/logo-facha.jpg");
+  position: absolute;
+  background-size: cover;
+  transform: rotatey(90deg);
+}
+

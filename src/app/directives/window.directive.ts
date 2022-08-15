@@ -9,7 +9,4 @@ export class WindowDirective {
 
   }
 
-  @HostListener('resize') resize(){
-    console.log(document.documentElement.clientWidth)
-  }
 }

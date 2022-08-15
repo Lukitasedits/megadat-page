@@ -1,0 +1,28 @@
+<div class="cover" #cover>
+  <div class="main-box">
+    <div class="logo" (click)="scrollHome()"></div>
+    <div class="lista" #lista>
+      <div class="item" (click)="scrollServicios()">  Servicios  </div>
+      <div class="item" (click)="scrollEmpresas()">  Empresas  </div>
+      <div class="item" #sistemasItem id="sistemas" (mouseleave)="ocultarSistemas()" (mouseover)="mostrarSistemas()" (click)="scrollSistemas()">  Sistemas  </div>
+      <div class="item" (click)="scrollContacto()">  Contacto  </div>
+    </div>
+    <div class="menu" #menu (click)="alterarMenu()"></div>
+  </div>
+  <div class="panelSistemas" #panelSistemas (mouseleave)="ocultarSistemas()" (mouseover)="mostrarSistemas()">
+    <div class="item-sistema" (click)="goToSistemaDeGestion()">Sistema de Gestión</div>
+    <div class="separador"></div>
+    <div class="item-sistema" (click)="goToSistemaVisualElectronica()">Sistema Visual Electrónica</div>
+  </div>
+  <div class="lista-menu" #listaMenu id="lista-menu">
+    <div class="item-menu" (click)="scrollServicios()">Servicios</div>
+    <div class="item-menu" (click)="scrollEmpresas()">Empresas</div>
+    <div class="item-menu"  (click)="sistemaMenuDesplegado=(sistemaMenuDesplegado)?false:true" id="sistemas-lista-menu">Sistemas <div class="flechita" [ngStyle]="{'background-image': (sistemaMenuDesplegado)?'url(/assets/imagenes/iconos/flecha-arriba.png)':'url(/assets/imagenes/iconos/flecha-abajo.png)'}"></div>
+    </div>
+    <div *ngIf="sistemaMenuDesplegado" class="sub-menu">
+      <div class="item-menu sub-item" (click)="goToSistemaDeGestion()">Sistema de Gestión</div>
+      <div class="item-menu sub-item" (click)="goToSistemaVisualElectronica()">Sistema Visual Electrónica</div>
+    </div>
+    <div class="item-menu" (click)="scrollContacto()">Contacto</div>
+  </div>
+</div>
