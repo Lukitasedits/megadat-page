@@ -37,27 +37,31 @@ export class HomeComponent implements OnInit, AfterViewInit {
     private empresasService : EmpresasService, private anchorScrollService: AnchorScrollService , private menusService: MenuService, private renderer: Renderer2, public router: Router) {
    }
   ngAfterViewInit(): void {
-    setTimeout(() => {
     this.inicialGaleria();
     this.reSizeWindow();
     this.initAnchorScrolls();
+    setTimeout(() => {
     });
   }
 
   ngOnInit(): void {
     this.empresas = this.empresasService.getEmpresas();
     this.menus = this.menusService.getMenus();
+    this.ajustarEmpresas();
   }
 
   @HostListener('window:resize', ['$event'])
   reSizeWindow(){
-    this.tamPantalla = document.documentElement.clientWidth;
-    this.ePFila= Number.parseInt(((this.tamPantalla.valueOf()-300)/300).toPrecision(1));
-    this.resto = this.empresas.length%this.ePFila;
-
+    this.ajustarEmpresas();
     const galeriaGeneral = this.galeria.nativeElement;
     let altoGaleria = this.tamPantalla.valueOf()*0.428;
     this.renderer.setStyle(galeriaGeneral, 'height', `${altoGaleria}px`);
+  }
+
+  ajustarEmpresas(){
+    this.tamPantalla = document.documentElement.clientWidth;
+    this.ePFila= Number.parseInt(((this.tamPantalla.valueOf()-300)/300).toPrecision(1));
+    this.resto = this.empresas.length%this.ePFila;
   }
 
 

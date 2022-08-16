@@ -34,6 +34,9 @@ export class HeaderComponent implements OnInit {
 
   ngAfterViewInit(): void {
     this.reSizeMethods();
+    setTimeout(()=>{
+      this.acomodarPanelSistemas();
+    });
   }
 
   @HostListener('window:scroll')
@@ -130,32 +133,40 @@ export class HeaderComponent implements OnInit {
 
   scrollServicios(){
     this.router.navigate(['inicio']);
-    this.anchorScrollService.getElementScroll(0).subscribe(e =>{
-      e.scrollIntoView({behavior: 'smooth'});
-    })
+    setTimeout(()=>{
+      this.anchorScrollService.getElementScroll(0).subscribe(e =>{
+        e.scrollIntoView({behavior: 'smooth'});
+      })
+    });
     this.ocultarHeader();
   }
 
   scrollEmpresas(){
     this.router.navigate(['inicio']);
-    this.anchorScrollService.getElementScroll(1).subscribe(e=>{
-      e.scrollIntoView({behavior: 'smooth'});
-    })
+    setTimeout(()=>{
+      this.anchorScrollService.getElementScroll(1).subscribe(e=>{
+        e.scrollIntoView({behavior: 'smooth'});
+      })
+    });
     this.ocultarHeader();
   }
 
   scrollSistemas(){
     this.router.navigate(['inicio']);
-    this.anchorScrollService.getElementScroll(2).subscribe(e =>{
-      e.scrollIntoView({behavior: 'smooth'});
-    })
+    setTimeout(()=>{
+      this.anchorScrollService.getElementScroll(2).subscribe(e =>{
+        e.scrollIntoView({behavior: 'smooth'});
+      })
+    });
     this.ocultarHeader();
   }
 
   scrollContacto(){
     this.router.navigate(['inicio']);
-    this.anchorScrollService.getElementScroll(3).subscribe(e => {
-      e.scrollIntoView({behavior: 'smooth'})
+    setTimeout(()=>{
+      this.anchorScrollService.getElementScroll(3).subscribe(e => {
+        e.scrollIntoView({behavior: 'smooth'})
+      });
     });
     this.ocultarHeader();
   }

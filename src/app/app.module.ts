@@ -17,10 +17,14 @@ import { NumberFormatDirective } from './directives/numberFormat.directive';
 import { TitlecaseDirective } from './directives/titlecase.directive';
 import { FormContactoDirective } from './directives/form-contacto.directive';
 const routes: Routes = [
-  {path:'', redirectTo:'/inicio', pathMatch:'full'},
+   {path:'', redirectTo:'/inicio', pathMatch:'full'},
   {path:'inicio', component: HomeComponent},
   {path: 'sistema-de-gestion', component: SistemaDeGestionComponent},
-  {path: 'sistema-visual-electronica', component: SistemaVisualElectronicaComponent}
+  {path: 'sistema-visual-electronica', component: SistemaVisualElectronicaComponent},
+  {path:'**', redirectTo:'inicio', pathMatch:'full'}
+  /* {path:'', component: HomeComponent},
+  {path: 'sistema-de-gestion', component: SistemaDeGestionComponent},
+  {path: 'sistema-visual-electronica', component: SistemaVisualElectronicaComponent} */
 ]
 
 @NgModule({

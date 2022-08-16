@@ -90,19 +90,19 @@
 }
 
 #servicio1 .icono{
-  background-image: url('/assets/imagenes/iconos/programacion.png');
+  background-image: url(/assets/imagenes/iconos/programacion.png);
 }
 
 #servicio2 .icono{
-  background-image: url('/assets/imagenes/iconos/engranaje.png');
+  background-image: url(/assets/imagenes/iconos/engranaje.png);
 }
 
 #servicio3 .icono{
-  background-image: url('/assets/imagenes/iconos/pc.png');
+  background-image: url(/assets/imagenes/iconos/pc.png);
 }
 
 #servicio4 .icono{
-  background-image: url('/assets/imagenes/iconos/caja.png');
+  background-image: url(/assets/imagenes/iconos/caja.png);
 }
 
 .servicio h2{

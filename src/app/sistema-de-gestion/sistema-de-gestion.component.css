@@ -116,8 +116,8 @@
 }
 
 #modulo1 .imagen{
-  background-image: url('/assets/imagenes/sistema-de-gestion/modulo1.jpg');
-}
+/*   background-image: url('/assets/imagenes/sistema-de-gestion/modulo1.jpg');
+ */}
 
 #modulo2 .imagen{
   background-image: url('/assets/imagenes/sistema-de-gestion/modulo2.jpg');
